@@ -80,6 +80,64 @@ y
 
 
 func calculator(a:Int, b:Int, op:String)->Int{
+
+    func plus(a:Int, b:Int)->Int{return a+b}
+    func minus(a:Int, b:Int)->Int{return a-b}
+    func multiply(a:Int, b:Int)->Int{return a*b}
+    
+    switch op{
+    case "+":
+        return plus(a: a, b: b)
+    case "-":
+        return minus(a: a, b: b)
+    case "*":
+        return multiply(a: a, b: b)
+    default:
+        return 0
+    }
     
 }
+
+//calculator(a: 4, b: 4, op: "+")
+calculator(a: 4, b: 4, op: "*")
+calculator(a: 4, b: 4, op: "-")
+calculator(a: 4, b: 4, op: "JKFDHKJFHDKJ")
+
+
+func calculator2(op:String)->(Int,Int)->Int{
+
+    func plus(a:Int, b:Int)->Int{return a+b}
+    func minus(a:Int, b:Int)->Int{return a-b}
+    func multiply(a:Int, b:Int)->Int{return a*b}
+    
+    switch op{
+    case "+":
+        return plus
+    case "-":
+        return minus
+    case "*":
+        return multiply
+    default:
+        return {a, b in return 0}
+    }
+    
 }
+
+var f = calculator2(op: "+")
+
+f(1,2)
+
+
+let names = ["a", "b", "c"]
+
+func backward(s1:String, s2:String)->Bool{return s1>s2}
+
+
+
+names.sorted(by:
+    {
+        (a:String , b: String)->Bool
+        in
+        return a>b
+        
+    })
